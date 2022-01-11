@@ -36,5 +36,7 @@ class TextInputBox:
     def draw(self, screen):
         # Blit the rect.
         pg.draw.rect(screen, self.box_color, self.rect)
+        if self.active:
+            pg.draw.rect(screen, (0,0,0), self.rect, 4)
         # Blit the text.
         screen.blit(self.txt_surface, (self.rect.x+5, self.rect.y+5))
