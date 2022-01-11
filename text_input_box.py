@@ -33,6 +33,12 @@ class TextInputBox:
                 self.txt_surface = self.font.render(self.text, True,
                                                     self.font_color)
 
+    def clear(self):
+        self.text = ''
+        # re-render the text
+        self.txt_surface = self.font.render(self.text, True,
+                                            self.font_color)
+
     def draw(self, screen):
         # Blit the rect.
         pg.draw.rect(screen, self.box_color, self.rect)

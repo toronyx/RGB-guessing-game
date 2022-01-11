@@ -28,17 +28,6 @@ for i in range(3):
                                                    screen_height/2-50,
                                                    90, 50))
 input_boxes[0].active = True
-# text_box_1 = text_input_box.TextInputBox(screen,
-#                                          150, screen_height/2-50,
-#                                          90, 50)
-# text_box_1.active = True
-# text_box_2 = text_input_box.TextInputBox(screen,
-#                                          300, screen_height/2-50,
-#                                          90, 50)
-# text_box_3 = text_input_box.TextInputBox(screen,
-#                                          450, screen_height/2-50,
-#                                          90, 50)
-# text_input_boxes = [text_box_1, text_box_2, text_box_3]
 
 while True:
     # Handling input
@@ -48,15 +37,12 @@ while True:
         if event.type == pg.QUIT:
             pg.quit()
             sys.exit()
-        # if (event.type == pg.MOUSEBUTTONDOWN) and (event.button == 1) :
-        #     if not (input_boxes[0].active or input_boxes[1].active
-        #             or input_boxes[2].active):
-        #         # Choose random RGB color
-        #         bg_color = random.randint(0,255,3)
-        #         screen.fill(bg_color)
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_SPACE:
-                # Choose random RGB color
+                # Clear input boxes
+                for input_box in input_boxes:
+                    input_box.clear()
+                # Choose random RGB background color
                 bg_color = random.randint(0,255,3)
                 screen.fill(bg_color)
             if event.key == pg.K_TAB:
@@ -78,11 +64,6 @@ while True:
                                                        True, (255,255,255))
                         screen.blit(txt_surface,
                                     (input_boxes[i].rect[0], screen_height/2))
-
-                    # answer_string = f'{bg_color[0]}  {bg_color[1]}  {bg_color[2]}'
-                    # txt_surface = base_font.render(answer_string,
-                    #                                True, (255,255,255))
-                    # screen.blit(txt_surface, (230, 250))
                 except:
                     txt_surface = base_font.render('Invalid color!',
                                                    True, (255,255,255))
