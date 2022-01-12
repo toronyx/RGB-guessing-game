@@ -3,11 +3,11 @@ Game where you guess the RGB colour values of a random colour
 
 
 ## To run
-To run: run guessing game.py (you'll need pygame, numpy, and python installed)
+run guessing game.py (you'll need pygame, numpy, and python installed)
 
 ## Controls
-**Enter** Submit guess 
+**Enter**: Submit guess 
 
-**Tab** Switch box
+**Tab**: Switch box
 
-**Space** New color
+**Space**: New color
