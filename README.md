@@ -7,5 +7,7 @@ To run: run guessing game.py (you'll need pygame, numpy, and python installed)
 
 ## Controls
 **Enter** Submit guess 
+
 **Tab** Switch box
+
 **Space** New color
